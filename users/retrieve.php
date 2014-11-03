@@ -1,4 +1,4 @@
-?php
+<?php
 
 include('../assets/application_header.php')
 include('../assets/connect.php');
