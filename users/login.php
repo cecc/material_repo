@@ -1,47 +1,45 @@
 <?php
 
-include('../assests/application_header.php');
-include('../connect.php');
+include('../assets/application_header.php');
+include('../assets/connect.php');
 
-if ($_SERVER ['REQUEST METHOD'] == POST){
-  
+
+if(isset($_POST['submit'])) {
+
   $username = $_POST['email'];
   $password = $_POST['password'];
-  
-  
-  // check to see if user exists
-  $sql = " SELECT COUNT(*) FROM repo_users WHERE email == $username AND password == $password ";
-  
-  $q = mysql_query($sql);
-  
-  if ($q > 1 ){
+ 
+ print "Hello !! "; 
+  try {
+
+
+  # MySQL with PDO_MYSQL
+    $dbh = new PDO("mysql:host=$host; dbname=$dbname", $user, $pass);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     
-    print " The User does exists in our system.";
-    
-    die();
-    
-  } else{
-    
-    print "No Match FOUDN try again";
-    
-  }
-  
-  
-  
-  
+
+
+    $dbh = null;
+ 
+}
+catch(PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+
+    echo $e->getMessage();
+}
+
+
+
+
 }
 
 ?>
 
-    <form method="post" action=<?=$_SERVER['PHP_SELF']?>>
+    <form method="post" action="login.php">
         <p><input type="text" name="email" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
-        <p class="remember_me">
-          <label>
-            <input type="checkbox" name="remember_me" id="remember_me">
-            Remember me on this computer
-          </label>
         </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+<input type="submit" value="Submit">
       </form>
 

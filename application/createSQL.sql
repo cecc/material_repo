@@ -19,7 +19,7 @@ contact
 status
 
 
-CREATE TABLE organization(
+CREATE TABLE repo_organization(
 	organization_id INTEGER,
 	org_name TEXT,
 	org_email TEXT,
@@ -37,10 +37,6 @@ CREATE TABLE organization(
 	created_at timestamp,
 	updated_at timestamp
 )
-
-
-----------------------------------------
-User
 
 
 

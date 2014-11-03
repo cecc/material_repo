@@ -1,27 +1,19 @@
 
 <?php
 
-$host = "sql2.njit.edu";
-$user = "cecc";
-$dbname = "cecc";
-$pass = "slavonic7";
+
+	$sys_hostname = 'sql2.njit.edu';
+	$sys_username = 'cecc';
+	$sys_project = 'cecc';
+	$sys_password = 'slavonic7';
 
 
-try {
+( $dbh = mysql_connect ( $sys_hostname, $sys_username, $sys_password ) )
+	        or die ( "Unable to connect to MySQL database.!! " );
+			
+
+mysql_select_db( $sys_project );
 
 
-  # MySQL with PDO_MYSQL
-    $dbh = new PDO("mysql:host=$host; dbname=$dbname", $user, $pass);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-    $dbh = null;
- 
-}
-catch(PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-
-    echo $e->getMessage();
-}
 
 ?>

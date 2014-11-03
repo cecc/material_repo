@@ -67,3 +67,19 @@ div {
     list-style: square;
   }
 }
+
+#wrapper{
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+header{
+  border-bottom: orange solid 2px;
+
+}
+
+header img{
+  text-align: center;
+}
