@@ -19,25 +19,25 @@ if ($result){
 
 				</tr>
 					";
+		echo '<tr>';
 
 		 while($row = mysql_fetch_assoc($result)){
-		 				echo '<td>' . $row['orgainzation_id'];
+		 				
+		 	echo '<td>' . $row['orgainzation_id'] . '</td>';
 
-			echo '<td>' . $row['org_name'];
+			echo '<td>' . $row['org_name'] . '</td>';
 			
-		    echo '<td>' . $row['org_email'];
+		    echo '<td>' . $row['org_email'] . '</td>';
 
 		    echo '<td>' . $row['org_number'] . '</td>';
 
-				    echo '<td> <a href="show.php?id='.$row['organization_id'] .'">Show </a>
-
-
-
-				    | Update | Destroy   </td></tr>';
+				    echo '<td> <a href="show.php?id='.$row['organization_id'] .'">Show </a> | Update | Destroy   </td></tr>';
   
 		
 		
 	    } 
+	    echo '</tr>';
+	    echo '</table>';
 	}
 	else{
 		
