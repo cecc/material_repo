@@ -1,7 +1,7 @@
 <?php
 
 include('../assests/application_header.php');
-include('../connect.php');
+include('../assests/connect.php');
 
 if ($_SERVER ['REQUEST METHOD'] == POST){
   
