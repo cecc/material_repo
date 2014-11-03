@@ -10,7 +10,7 @@ if ($_SERVER ['REQUEST METHOD'] == POST){
   
   
   // check to see if user exists
-  $sql = " SELECT COUNT(*) FROM repo_users WHERE email == $username AND password == $password ";
+  $sql = " SELECT COUNT(*) FROM repo_user WHERE email == $username AND password == $password ";
   
   $q = mysql_query($sql);
   
