@@ -33,7 +33,7 @@ if ($_SERVER ['REQUEST METHOD'] == POST){
 
 ?>
 
-    <form method="post" action=<?=$_SERVER['PHP_SELF']?> method="post">
+    <form method="post" action=<?=$_SERVER['PHP_SELF']?>>
         <p><input type="text" name="email" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
         <p class="remember_me">
