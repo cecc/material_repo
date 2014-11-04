@@ -32,5 +32,5 @@ if ($result){
 	}
 
 die;
-
+	 <a href="update.php?id='.$row['ID'] .'">Update </a> 
 ?>
