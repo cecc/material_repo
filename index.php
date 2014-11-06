@@ -16,4 +16,4 @@ include('assets/connect.php');
 <p>A team of NJIT student volunteers in the Civic Engagement Computer Center will create this template website that can be integrated into the partner agencies’ websites for the purpose of hunger prevention awareness at no cost to the agency. We will have a demonstration for you as to how this will all work. </p>
 
 
-<a href="users/login.php"> Click here to login </a>
+<a href="login.php"> Click here to login </a>

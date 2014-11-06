@@ -30,9 +30,9 @@ if ($_SERVER ['REQUEST_METHOD']== POST){
 
 
 
-	$update = "UPDATE users 
-				SET Name = '$f_name',  Email = '$f_email', phone_number = '$f_phone', 
-					Password = '$f_pass'
+	$update = "UPDATE repo_user
+				SET name = '$f_name',  email = '$f_email', phoneNumber = '$f_phone', 
+					password = '$f_password'
 				WHERE ID = $f_id";
 				
 
@@ -45,6 +45,7 @@ if ($_SERVER ['REQUEST_METHOD']== POST){
 	if ($upd){
 	
 		print $f_name . " your account has been updated.";
+		
 	}
 	
 
@@ -58,7 +59,7 @@ print "<h1> User Update Page</h1>" ;
 print "<h2> The ID passed is " . $n . "</h2>";
 
 
-$sql = "SELECT * FROM users WHERE ID = $n";
+$sql = "SELECT * FROM repo_user WHERE ID = $n";
 
 $result = mysql_query($sql);
 
@@ -73,12 +74,12 @@ if ($result){
 		
 		 while($row = mysql_fetch_assoc($result)){
 		 	print '<input type="hidden" name="user_id" value="' . $row['ID'] . '">';
-		 	print 'Name: <input type="text" name="name" value="' . $row['Name'] .'"><br>';
-			print 'E-mail: <input type="text" name="email" value="' . $row['Email'] .'"><br>';
-			print 'Change Password: <input type="password" name="password" value="' . $row['Password'] .'"><br>';
-			print 'Phone Number: <input type="text" name="phone" value="' . $row['phone_number'] .'"><br>';
+		 	print 'Name: <input type="text" name="name" value="' . $row['name'] .'"><br>';
+			print 'E-mail: <input type="text" name="email" value="' . $row['email'] .'"><br>';
+			print 'Change Password: <input type="password" name="password" value="' . $row['password'] .'"><br>';
+			print 'Phone Number: <input type="text" name="phone" value="' . $row['phoneNumber'] .'"><br>';
 			print 'Secondary Number: <input type="text" name="secondaryPhone" value="' . $row['secondaryPhone'] .'"><br>';
-			print 'Type: <input type="text" name="type" value="' . $row['Type'] .'"><br>';
+			print 'Type: <input type="text" name="type" value="' . $row['type'] .'"><br>';
 			print '<input type="submit" value="Update">';
 		
 	    } 

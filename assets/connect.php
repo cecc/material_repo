@@ -8,7 +8,7 @@
 	$sys_password = 'slavonic7';
 
 
-( $dbh = mysql_connect ( $sys_hostname, $sys_username, $sys_password ) )
+( $dbh = mysql_connect( $sys_hostname, $sys_username, $sys_password ) )
 	        or die ( "Unable to connect to MySQL database.!! " );
 			
 
