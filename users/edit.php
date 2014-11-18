@@ -18,16 +18,9 @@ type:<input type="text" name="type"><br>
 status: <input type="boolean" name="status"><br>
 password: <input type="text" name="password"><br>
 organization_id: <input type="text" name="organization_id"><br>
-
-
-
-
-
+<input type="submit" name="submit" value="Submit"> 
 
 </form>
-
-
-
 
 
 </html>
